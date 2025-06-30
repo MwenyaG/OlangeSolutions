@@ -168,7 +168,7 @@ h6,
     align-items: center;
     justify-content: center;
     text-align: center;
-    background: rgba(66, 49, 15, 0.6);
+    background: rgba(62, 58, 15, 0.6);
     z-index: 1;
 }
 
@@ -201,17 +201,17 @@ h6,
 }
 /* \Page header */
 .page-header {
-    background: linear-gradient(rgba(15, 66, 41, .6), rgba(15, 66, 41, .6)),  center center no-repeat;
+    background: linear-gradient(rgba(86, 77, 20, 0.6), rgba(81, 81, 19, 0.6)),  center center no-repeat;
     background-size: cover;
 }
 
 .page-header2 {
-    background: linear-gradient(rgba(15, 66, 41, .6), rgba(15, 66, 41, .6)), center center no-repeat;
+    background: linear-gradient(rgba(75, 73, 15, 0.6), rgba(80, 80, 19, 0.6)),  center center no-repeat;
     background-size: cover;
 }
 
 .page-header3 {
-    background: linear-gradient(rgba(15, 66, 41, .6), rgba(15, 66, 41, .6)),  center center no-repeat;
+    background: linear-gradient(rgba(75, 73, 15, 0.6), rgba(80, 80, 19, 0.6)),  center center no-repeat;
     background-size: cover;
 }
 
