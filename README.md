@@ -28,7 +28,43 @@ This website was converted from a legacy multi-page static HTML setup into a **R
 
 <img width="1414" height="824" alt="Olange Solutions homepage hero" src="https://github.com/user-attachments/assets/2cf05328-280d-4457-a8af-3623db70b269" />
 
-The README is set up so more screenshots can be added in the same format as the project grows.
+### Services Grid
+
+The services page uses structured category cards, consistent icon treatment, and expandable detail modals.
+
+<!-- Replace the placeholder below with the direct GitHub image URL for the Services Grid screenshot -->
+<!-- <img width="2048" height="1628" alt="Olange Solutions services grid" src="PASTE_SERVICES_SCREENSHOT_URL_HERE" /> -->
+
+### Service Detail Modal
+
+The shared modal system presents service details, benefits, and supporting context in a reusable React component.
+
+<!-- Replace the placeholder below with the direct GitHub image URL for the Service Modal screenshot -->
+<!-- <img width="1845" height="1394" alt="Olange Solutions service modal" src="PASTE_SERVICE_MODAL_SCREENSHOT_URL_HERE" /> -->
+
+### Guided Quote Flow
+
+The quote section is designed as a structured request experience so users can choose between services and supplies with clearer intent.
+
+<!-- Replace the placeholder below with the direct GitHub image URL for the Quote Flow screenshot -->
+<!-- <img width="2048" height="1534" alt="Olange Solutions quote section" src="PASTE_QUOTE_SECTION_SCREENSHOT_URL_HERE" /> -->
+
+### About Overview
+
+The About page combines a dark, modern section layout with branded capability cards and clearer operational positioning.
+
+<!-- Replace the placeholder below with the direct GitHub image URL for the About Overview screenshot -->
+<!-- <img width="2048" height="1626" alt="Olange Solutions about overview" src="PASTE_ABOUT_OVERVIEW_SCREENSHOT_URL_HERE" /> -->
+
+### Adding More Screenshots
+
+To add more images in the same style, use:
+
+```html
+<img width="1414" height="824" alt="Descriptive screenshot title" src="https://github.com/user-attachments/assets/your-image-id" />
+```
+
+GitHub-hosted image links work especially well in the README because they render consistently in Markdown and preserve the original screenshot dimensions.
 
 ## Core Experience
 
@@ -227,7 +263,8 @@ npm run preview
 ## Current Content Notes
 
 - The testimonial section currently uses **sample testimonial copy** for presentation.
-- The README screenshot section already supports GitHub-hosted image embeds.
+- The README screenshot section is structured for GitHub-hosted image embeds.
+- The additional screenshot slots are already prepared and only need the final direct image URLs pasted into the `src` fields.
 - The old static HTML pages were removed so the project is now aligned with the React/Vite structure.
 
 ## Customization Guide
