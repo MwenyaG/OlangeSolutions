@@ -3,10 +3,23 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Olange Solutions</title>
+    <title>About | Olange Solutions</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
+
+    <script>
+        (function () {
+            try {
+                var storedTheme = localStorage.getItem('olange-theme');
+                var systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+                var theme = storedTheme || (systemDark ? 'dark' : 'light');
+                document.documentElement.setAttribute('data-theme', theme);
+            } catch (error) {
+                document.documentElement.setAttribute('data-theme', 'light');
+            }
+        })();
+    </script>
 
     <!-- Favicon -->
     <link href="img/icon/logo1.png" rel="icon" type="image/png">
@@ -15,7 +28,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Jost:wght@500;600;700&family=Open+Sans:wght@400;500&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Sora:wght@500;600;700;800&amp;display=swap"
         rel="stylesheet">
 
     <!-- Icon Font Stylesheet -->
@@ -34,7 +47,7 @@
     <link href="css/style.css" rel="stylesheet">
 </head>
 
-<body>
+<body class="page-about">
     <!-- Spinner Start -->
     <div id="spinner"
         class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
@@ -44,17 +57,17 @@
 
 
     <!-- Topbar Start -->
-    <div class="container-fluid bg-dark text-light px-0 py-2">
+    <!-- <div class="container-fluid bg-dark text-light px-0 py-2">
         <div class="row gx-0 d-none d-lg-flex">
             <div class="col-lg-7 px-5 text-start">
                 <div class="h-100 d-inline-flex align-items-center me-4">
                     <span class="fa fa-phone-alt me-2"></span>
                     <span>+260 97 7304359 | +260 97 9974079 </span>
-                </div>
+                </div> -->
                 <!-- ***** for the email **** -->
 
 
-            </div>
+            <!-- </div> -->
             <!-- <div class="col-lg-5 px-5 text-end">
                 <div class="h-100 d-inline-flex align-items-center mx-n2">
                     <span>Follow us on:</span>
@@ -62,98 +75,184 @@
                         target="_blank"><i class="fab fa-whatsapp"></i></a>
                 </div>
             </div> -->
-        </div>
-    </div>
+        <!-- </div>
+    </div> -->
     <!-- Topbar End -->
 
 
     <!-- Navbar Start -->
-    <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top p-0">
-        <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
-            <img src="img/icon/logo1.png" alt="Logo" style="width: 70px; height: 80px;" class="me-2">
-            <div class="d-flex flex-column">
-                <h1 class="m-0" style="color: #3d3b37;">Olange Solutions</h1>
-                <small class="text-muted fw-light" style="font-size: 0.75rem;">
-                    Landscaping, Services and Supplies
-                </small>
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top p-0 site-navbar">
+        <div class="container-fluid px-4 px-lg-5">
+            <a href="home.html" class="navbar-brand d-flex align-items-center">
+                <img src="img/icon/logo1.png" alt="Olange Solutions logo" class="brand-mark me-3">
+                <div class="d-flex flex-column">
+                    <h1 class="m-0 brand-name">Olange Solutions</h1>
+                    <small class="brand-tagline">Where Service Meets Supply, Excellence Follows</small>
+                </div>
+            </a>
+
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav ms-auto p-4 p-lg-0">
+                    <a href="home.html" class="nav-item nav-link">Home</a>
+                    <a href="about.html" class="nav-item nav-link active">About</a>
+                    <div class="nav-item dropdown">
+                        <button class="nav-link dropdown-toggle nav-dropdown-button" type="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">Packages</button>
+                        <ul class="dropdown-menu dropdown-menu-end bg-light shadow-sm border-0">
+                            <li><a class="dropdown-item" href="service.html">Services</a></li>
+                            <li><a class="dropdown-item" href="supplies.html">Supplies</a></li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-        </a>
-        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarCollapse">
-            <div class="navbar-nav ms-auto p-4 p-lg-0">
-                <a href="index.html" class="nav-item nav-link">Home</a>
-                <a href="about.html" class="nav-item nav-link active">About</a>
-                <a href="service.html" class="nav-item nav-link">Services</a>
-                <a href="supplies.html" class="nav-item nav-link">Supplies</a>
-                <!-- <a href="project.html" class="nav-item nav-link">Projects</a> -->
+
+            <div class="nav-actions d-flex align-items-center ms-lg-4">
+                <a href="tel:+260977304359" class="contact-pill d-none d-xl-inline-flex">
+                    <i class="bi bi-telephone-fill"></i>
+                    <span>Call Us</span>
+                </a>
+                <button class="theme-toggle" type="button" aria-label="Toggle color mode" aria-pressed="false">
+                    <i class="bi bi-sun-fill"></i>
+                    <i class="bi bi-moon-stars-fill"></i>
+                </button>
+                <button class="navbar-toggler ms-2" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
             </div>
+        </div>
     </nav>
     <!-- Navbar End -->
 
 
-    <!-- Page Header Start -->
-    <!-- <div class="container-fluid page-header2 py-5 mb-5 wow fadeIn" data-wow-delay="0.1s">
-        <div class="container text-center py-5">
-            <h1 class="display-3 text-white mb-4 animated slideInDown">About Us</h1>
-            <nav aria-label="breadcrumb animated slideInDown">
-
-            </nav>
+    <section class="page-hero">
+        <div class="container">
+            <div class="page-hero-grid">
+                <div class="page-hero-copy">
+                    <span class="section-badge">About Olange Solutions</span>
+                    <h1 class="display-4 mb-4">Built to keep people, workplaces, and projects moving with confidence.</h1>
+                    <p>
+                        We combine dependable services with practical sourcing support, helping clients stay organized,
+                        responsive, and ready for the work ahead.
+                    </p>
+                </div>
+                <div class="page-hero-visual" aria-hidden="true">
+                    <div class="hero-visual-glow"></div>
+                    <div class="hero-visual-ring hero-visual-ring-one"></div>
+                    <div class="hero-visual-ring hero-visual-ring-two"></div>
+                    <div class="hero-node hero-node-center">
+                        <i class="fas fa-briefcase"></i>
+                        <span>Operations</span>
+                    </div>
+                    <div class="hero-node hero-node-a">
+                        <i class="fas fa-truck-loading"></i>
+                        <span>Supply Flow</span>
+                    </div>
+                    <div class="hero-node hero-node-b">
+                        <i class="fas fa-tools"></i>
+                        <span>Field Support</span>
+                    </div>
+                    <div class="hero-node hero-node-c">
+                        <i class="fas fa-users-cog"></i>
+                        <span>Coordination</span>
+                    </div>
+                    <div class="hero-kpi hero-kpi-top">
+                        <strong>5+ years</strong>
+                        <span>trusted delivery</span>
+                    </div>
+                    <div class="hero-kpi hero-kpi-bottom">
+                        <strong>Services + supplies</strong>
+                        <span>under one partner</span>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div> -->
-    <!-- Page Header End -->
+    </section>
 
 
     <!-- About Start -->
     <div class="container-xxl py-5">
         <div class="container">
-            <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
-                <!-- <p class="fs-5 fw-bold text-primary">Our Services</p> -->
-                <h1 class="display-5 mb-5">About Us</h1>
+            <div class="text-center mx-auto section-heading wow fadeInUp" data-wow-delay="0.1s"
+                style="max-width: 620px;">
+                <p class="section-badge justify-content-center mx-auto">Who We Are</p>
+                <h1 class="display-5 mb-3">A practical partner for ongoing operations and urgent needs</h1>
+                <p>We bring service execution, procurement support, and hands-on coordination into one clear,
+                    responsive workflow.</p>
             </div>
-            <div class="row g-5 align-items-end">
-                <!-- Years & Intro Text -->
-                <div class="col-lg-6 col-md-7 wow fadeInUp" data-wow-delay="0.3s">
-                    <h1 class="display-1 text-primary mb-0">5</h1>
-                    <p class="text-primary mb-4">Years of Experience</p>
-                    <h1 class="display-5 mb-4">Serving with Care, Creativity & Commitment</h1>
-                    <p style="text-align: justify;" class="mb-4">
-                        At Olange Solutions, we offer a diverse range of professional services and reliable supply
-                        solutions designed to meet the everyday needs of businesses, institutions, and individuals.
-                        Whether you require dependable service execution or fast delivery of essential items, we are
-                        here to support your goals with efficiency and care.
-                    </p>
-                    <p style="text-align: justify;" class="mb-4">
-                        From facility maintenance, cleaning, and logistics to the supply of stationery, safety gear,
-                        tools, and electronic components — we bring practical value to every space we serve. Our mission
-                        is simple: to deliver trusted solutions that keep your operations running smoothly.
-                    </p>
-
-                </div>
-
-                <!-- Features -->
-                <div class="col-lg-3 col-md-12 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="row g-5">
-                        <div class="col-12 col-sm-6 col-lg-12">
-                            <div class="border-start ps-4">
-                                <i class="fa fa-leaf fa-3x text-primary mb-3"></i>
-                                <h4 class="mb-3">Service Excellence</h4>
-                                <span class="justified-text">
-                                    From delivery to execution, we provide dependable, high-quality services and
-                                    supplies tailored to meet your operational needs with precision and care.
-                                </span>
-
+            <div class="about-overview wow fadeInUp" data-wow-delay="0.2s">
+                <div class="row g-4 align-items-stretch">
+                    <div class="col-lg-5">
+                        <div class="about-story-card h-100">
+                            <div class="about-story-badge">
+                                <i class="fas fa-layer-group"></i>
+                                <span>Integrated support model</span>
+                            </div>
+                            <h2 class="display-6 mb-4">One team that can source, coordinate, and execute.</h2>
+                            <p>
+                                At <strong>Olange Solutions</strong>, we support businesses, institutions, and
+                                households with the essentials that keep operations moving. That means dependable field
+                                services, responsive procurement help, and practical communication throughout the job.
+                            </p>
+                            <p class="mb-4">
+                                From facility maintenance, logistics, and cleaning to fast delivery of stationery,
+                                safety gear, tools, and electronic components, we focus on useful support that reduces
+                                delays and keeps momentum up.
+                            </p>
+                            <div class="about-mini-stats">
+                                <div class="about-mini-stat">
+                                    <strong>5+</strong>
+                                    <span>years of trusted delivery</span>
+                                </div>
+                                <div class="about-mini-stat">
+                                    <strong>2 core lines</strong>
+                                    <span>services and supplies</span>
+                                </div>
+                                <div class="about-mini-stat">
+                                    <strong>Flexible</strong>
+                                    <span>solutions for each client</span>
+                                </div>
                             </div>
                         </div>
-                        <div class="col-12 col-sm-6 col-lg-12">
-                            <div class="border-start ps-4">
-                                <i class="fa fa-truck fa-3x text-primary mb-3"></i>
-                                <h4 class="mb-3">Reliable Supplies</h4>
-                                <span>
-                                    We deliver essential supplies like tools, protective gear, and office materials
-                                    swiftly and efficiently—so you can focus on what matters.
-                                </span>
+                    </div>
+                    <div class="col-lg-7">
+                        <div class="row g-4">
+                            <div class="col-md-6">
+                                <div class="about-capability-card h-100">
+                                    <div class="about-capability-icon">
+                                        <i class="fas fa-cogs"></i>
+                                    </div>
+                                    <h5>Service Excellence</h5>
+                                    <p>Precision, consistency, and care guide every cleaning, maintenance, and project support engagement.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="about-capability-card h-100">
+                                    <div class="about-capability-icon">
+                                        <i class="fas fa-truck-loading"></i>
+                                    </div>
+                                    <h5>Reliable Supplies</h5>
+                                    <p>We help clients source tools, protective gear, hardware, and office essentials without unnecessary delays.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="about-capability-card h-100">
+                                    <div class="about-capability-icon">
+                                        <i class="fas fa-shield-alt"></i>
+                                    </div>
+                                    <h5>Quality and Safety</h5>
+                                    <p>We prioritize dependable materials, careful handling, and solutions that support safe working environments.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="about-capability-card h-100">
+                                    <div class="about-capability-icon">
+                                        <i class="fas fa-clipboard-list"></i>
+                                    </div>
+                                    <h5>Custom Fit Delivery</h5>
+                                    <p>Our packages adapt to the scope, urgency, and budget of each client instead of forcing a one-size-fits-all process.</p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -162,47 +261,26 @@
         </div>
     </div>
 
+
     <!-- About End -->
-
-
-    <!-- Facts Start -->
-    <div class="container-fluid facts my-5 py-5" data-parallax="scroll" data-image-src="img/img2.jpg">
-        <div class="container py-5">
-            <div class="row g-5">
-                <div class="col-sm-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.1s">
-                    <h1 class="display-4 text-white" data-toggle="counter-up">20</h1>
-                    <span class="fs-5 fw-semi-bold text-light">Happy Households Served</span>
-                </div>
-                <div class="col-sm-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.5s">
-                    <h1 class="display-4 text-white" data-toggle="counter-up">120</h1>
-                    <span class="fs-5 fw-semi-bold text-light">Supplies Delivered</span>
-                </div>
-                <div class="col-sm-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.7s">
-                    <h1 class="display-4 text-white" data-toggle="counter-up">10</h1>
-                    <span class="fs-5 fw-semi-bold text-light">Team Members</span>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Facts End -->
-
 
     <!-- Team Start -->
     <div class="container-xxl py-5">
         <div class="container">
-            <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
-                <p class="fs-5 fw-bold text-primary">Our Team</p>
-                <h1 class="display-5 mb-5">Meet our Dedicated & Experienced Team Members</h1>
+            <div class="text-center mx-auto section-heading wow fadeInUp" data-wow-delay="0.1s"
+                style="max-width: 620px;">
+                <p class="section-badge justify-content-center mx-auto">Our Team</p>
+                <h1 class="display-5 mb-3">Meet the people behind the delivery</h1>
+                <p>Each project benefits from practical coordination, financial discipline, and technical thinking.</p>
             </div>
             <div class="row g-4">
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="team-item rounded">
-                        <img class="img-fluid" src="img/mwaba.jpg"
+                        <img class="img-fluid" src="img/mwaba.jpeg"
                             style="height: 400px; width: 100%; object-fit: cover;" alt="">
                         <div class="team-text">
                             <h4 class="mb-0">Mwaba Nankolongo</h4>
-                            <p class="text-primary">Landscape Designer</p>
+                            <p class="text-primary">Technical and Project analyst</p>
                             <div class="team-social d-flex">
                                 <a class="btn btn-square rounded-circle me-2"
                                     href="https://www.facebook.com/angela.nankolongo" target="_blank"><i
@@ -213,11 +291,11 @@
                 </div>
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
                     <div class="team-item rounded">
-                        <img class="img-fluid" src="img/carol.jpg"
+                        <img class="img-fluid" src="img/carol.jpeg"
                             style="height: 400px; width: 100%; object-fit: cover;" alt="">
                         <div class="team-text">
                             <h4 class="mb-0">Carol Muyeba</h4>
-                            <p class="text-primary">Garden Designer</p>
+                            <p class="text-primary">Director - Administration and Finance </p>
                             <div class="team-social d-flex">
                                 <a class="btn btn-square rounded-circle me-2"
                                     href="https://www.facebook.com/carol.nankolongo" target="_blank"><i
@@ -232,7 +310,7 @@
                             style="height: 400px; width: 100%; object-fit: cover;" alt="">
                         <div class="team-text">
                             <h4 class="mb-0">George Muyeba</h4>
-                            <p class="text-primary">Software Developer</p>
+                            <p class="text-primary">Software developers and Software engineer</p>
                             <div class="team-social d-flex">
                                 <a class="btn btn-square rounded-circle me-2"
                                     href="https://www.linkedin.com/in/george-muyeba-8599ba222/" target="_blank"><i
