@@ -1201,6 +1201,27 @@ body.page-supplies .page-hero {
     gap: 0.85rem;
 }
 
+.quote-option-grid-wrapper {
+    max-height: 30rem;
+    overflow-y: auto;
+    padding-right: 0.25rem;
+}
+
+.quote-option-grid-wrapper::-webkit-scrollbar {
+    width: 10px;
+}
+
+.quote-option-grid-wrapper::-webkit-scrollbar-thumb {
+    border-radius: 999px;
+    background: rgba(45, 143, 91, 0.28);
+    border: 2px solid transparent;
+    background-clip: padding-box;
+}
+
+.quote-option-grid-wrapper::-webkit-scrollbar-track {
+    background: transparent;
+}
+
 .quote-option-card {
     display: flex;
     align-items: flex-start;
@@ -1991,6 +2012,10 @@ textarea.form-control {
     .quote-option-grid,
     .about-mini-stats {
         grid-template-columns: 1fr;
+    }
+
+    .quote-option-grid-wrapper {
+        max-height: 24rem;
     }
 
     .quote-intro {
