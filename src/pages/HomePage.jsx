@@ -85,35 +85,64 @@ export default function HomePage() {
 
       <div className="container-xxl py-5">
         <div className="container">
-          <div className="row g-5 align-items-end">
-            <div className="col-lg-3 col-md-5">
-              <img
-                className="img-fluid rounded"
-                src="/img/contracting-services.jpg"
-                alt="Olange contracting services"
-                style={{ height: 330, objectFit: "cover" }}
-              />
-            </div>
-
-            <div className="col-lg-6 col-md-7">
+          <section className="home-about-section">
+            <div className="home-about-copy">
               <span className="section-badge mb-3">Who We Are</span>
               <h2 className="display-6 mb-4">Practical support for homes, offices, and ambitious projects.</h2>
-              <p className="mb-4" style={{ textAlign: "justify" }}>
-                We provide a wide range of professional services tailored to meet the needs of businesses, institutions,
-                and individuals. From facility maintenance and cleaning to technical support and creative solutions, our
-                team is equipped to deliver reliable and efficient service across multiple sectors.
+              <p className="home-about-lead">
+                We combine hands-on service execution with dependable sourcing support, giving clients one clear partner
+                for the work that keeps operations moving.
+              </p>
+              <p className="home-about-copy-text">
+                From maintenance, cleaning, and technical support to essential supplies for offices, homes, and industrial
+                environments, our focus is simple: deliver useful solutions with clarity, responsiveness, and follow-through.
               </p>
 
-              <p className="mb-4" style={{ textAlign: "justify" }}>
-                In addition to our service offerings, we supply a variety of essential items including stationery, safety
-                gear, tools, electronic components, and general equipment for offices, homes, and industrial environments.
-              </p>
+              <div className="home-about-points">
+                <div className="home-about-point">
+                  <i className="fas fa-tools"></i>
+                  <span>Reliable field and maintenance support</span>
+                </div>
+                <div className="home-about-point">
+                  <i className="fas fa-box-open"></i>
+                  <span>Practical supply sourcing for daily operations</span>
+                </div>
+                <div className="home-about-point">
+                  <i className="fas fa-truck-moving"></i>
+                  <span>Clear coordination and delivery across needs</span>
+                </div>
+              </div>
 
-              <Link className="btn btn-primary py-3 px-4" to="/about">
-                Learn More
-              </Link>
+              <div className="home-about-actions">
+                <Link className="btn btn-primary py-3 px-4" to="/about">
+                  Learn More
+                </Link>
+                <div className="home-about-note">
+                  <strong>One partner</strong>
+                  <span>for services, supplies, and responsive follow-through.</span>
+                </div>
+              </div>
             </div>
-          </div>
+
+            <div className="home-about-visual" aria-hidden="true">
+              <div className="home-about-image-card">
+                <img src="/img/about.jpg" alt="" className="home-about-image" />
+                <div className="home-about-image-overlay"></div>
+              </div>
+              <div className="home-about-floating home-about-floating-top">
+                <span className="home-about-floating-label">What we deliver</span>
+                <strong>Services + Supplies</strong>
+                <small>One cleaner workflow for sourcing, support, and delivery.</small>
+              </div>
+              <div className="home-about-floating home-about-floating-bottom">
+                <i className="fas fa-headset"></i>
+                <div>
+                  <strong>Responsive coordination</strong>
+                  <small>Clear communication from quote to follow-through.</small>
+                </div>
+              </div>
+            </div>
+          </section>
         </div>
       </div>
 

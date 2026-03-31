@@ -81,24 +81,24 @@ export default function ContentModal({ item, onClose }) {
           {item.outro && <p className="mb-0">{item.outro}</p>}
 
           {item.benefits?.length ? (
-            <div className="mt-4 p-3 bg-light rounded app-modal-benefits">
+            <div className="mt-4 p-3 rounded app-modal-benefits">
               <h6>
-                <i className={`${item.benefitIcon || "fa fa-check-circle"} text-success me-2`}></i>
+                <i className={`${item.benefitIcon || "fa fa-check-circle"} app-modal-benefit-icon me-2`}></i>
                 {item.benefitLabel || "Benefits"}
               </h6>
               <div className="row">
                 <div className="col-md-6">
                   {firstColumn.map((benefit) => (
-                    <span key={benefit} className="d-block mb-1">
-                      <i className="fa fa-check-circle text-primary me-1"></i>
+                    <span key={benefit} className="d-block mb-1 app-modal-benefit-text">
+                      <i className="fa fa-check-circle app-modal-benefit-check me-1"></i>
                       {benefit}
                     </span>
                   ))}
                 </div>
                 <div className="col-md-6">
                   {secondColumn.map((benefit) => (
-                    <span key={benefit} className="d-block mb-1">
-                      <i className="fa fa-check-circle text-primary me-1"></i>
+                    <span key={benefit} className="d-block mb-1 app-modal-benefit-text">
+                      <i className="fa fa-check-circle app-modal-benefit-check me-1"></i>
                       {benefit}
                     </span>
                   ))}
