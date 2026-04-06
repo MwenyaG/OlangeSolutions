@@ -711,6 +711,10 @@ main {
   max-width: 155px;
 }
 
+.home-hero-accent {
+  z-index: 2;
+}
+
 .home-hero-card-a {
   top: 44px;
   left: 44px;
@@ -719,6 +723,15 @@ main {
 .home-hero-card-b {
   right: 32px;
   bottom: 92px;
+}
+
+.home-hero-accent-top {
+  right: 28px;
+}
+
+.home-hero-accent-bottom {
+  left: 32px;
+  bottom: 36px;
 }
 
 .page-hero-visual .hero-node,
@@ -790,6 +803,16 @@ main {
     bottom: 74px;
   }
 
+  .home-hero-accent-top {
+    top: 18px;
+    right: 18px;
+  }
+
+  .home-hero-accent-bottom {
+    left: 18px;
+    bottom: 24px;
+  }
+
   .nav-actions .contact-pill {
     display: none !important;
   }
@@ -850,6 +873,16 @@ main {
   .testimonial-proof-card {
     width: min(340px, calc(100vw - 3rem));
   }
+
+  .site-navbar,
+  .site-navbar.navbar.sticky-top {
+    top: 10px;
+  }
+
+  .nav-shell {
+    border-radius: 22px;
+    padding: 0 0.9rem;
+  }
 }
 
 @media (max-width: 575.98px) {
@@ -883,6 +916,22 @@ main {
   .home-hero-card-b {
     right: 16px;
     bottom: 56px;
+  }
+
+  .home-hero-accent-top {
+    right: 12px;
+    top: 12px;
+  }
+
+  .home-hero-accent-bottom {
+    left: 12px;
+    bottom: 16px;
+    max-width: 155px;
+  }
+
+  .nav-shell {
+    border-radius: 20px;
+    padding: 0 0.75rem;
   }
 }
 

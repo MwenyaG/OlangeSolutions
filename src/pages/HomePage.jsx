@@ -61,9 +61,13 @@ export default function HomePage() {
             </div>
 
             <div className="home-hero-visual" aria-hidden="true">
+              <div className="home-hero-gradient-beam"></div>
               <div className="home-hero-glow home-hero-glow-a"></div>
               <div className="home-hero-glow home-hero-glow-b"></div>
+              <div className="home-hero-glow home-hero-glow-c"></div>
               <div className="home-hero-grid-lines"></div>
+              <div className="home-hero-spark home-hero-spark-a"></div>
+              <div className="home-hero-spark home-hero-spark-b"></div>
               <div className="home-hero-core">
                 <span className="home-core-label">Olange Solutions</span>
                 <strong>Services + Supplies</strong>
@@ -77,7 +81,19 @@ export default function HomePage() {
                 <i className="fas fa-box-open"></i>
                 <span>Supply sourcing</span>
               </div>
+              <div className="home-hero-accent home-hero-accent-top">
+                <span>Fast response</span>
+                <strong>Quicker coordination</strong>
+              </div>
+              <div className="home-hero-accent home-hero-accent-bottom">
+                <i className="fas fa-truck-moving"></i>
+                <div>
+                  <span>Delivery-ready</span>
+                  <strong>Support in motion</strong>
+                </div>
+              </div>
               <div className="home-hero-orbit home-hero-orbit-one"></div>
+              <div className="home-hero-orbit home-hero-orbit-two"></div>
             </div>
           </div>
         </div>
