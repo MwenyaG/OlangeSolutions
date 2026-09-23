@@ -1534,3 +1534,196 @@ body {
     animation: none;
   }
 }
+
+/* Consistent, less pill-shaped actions */
+.btn,
+.quote-pill,
+.contact-pill,
+.mobile-quote-link,
+.footer-cta,
+.footer-ghost-link,
+.quote-choice,
+.quote-option-card,
+.team-profile-link,
+.app-modal-close,
+.navbar-toggler,
+.theme-toggle {
+  border-radius: 11px;
+}
+
+.back-to-top.rounded-circle {
+  border-radius: 12px !important;
+}
+
+@media (min-width: 768px) {
+  .home-hero .hero-actions {
+    justify-content: flex-start;
+  }
+}
+
+/* Keep every page-hero item in its own cell instead of animating into its neighbours. */
+.page-hero-visual {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-rows: repeat(2, minmax(0, auto));
+  align-content: center;
+  gap: 0.9rem;
+  padding: 1.5rem;
+}
+
+.page-hero-visual .hero-node,
+.page-hero-visual .hero-kpi {
+  position: relative;
+  inset: auto;
+  z-index: 2;
+  display: flex;
+  min-width: 0;
+  width: 100%;
+  max-width: none;
+  min-height: 84px;
+  padding: 0.85rem;
+  border-radius: 15px;
+  animation: none;
+  transform: none;
+}
+
+.page-hero-visual .hero-node {
+  justify-content: flex-start;
+}
+
+.page-hero-visual .hero-node i {
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 10px;
+}
+
+.page-hero-visual .hero-node span,
+.page-hero-visual .hero-kpi span {
+  font-size: 0.74rem;
+}
+
+.page-hero-visual .hero-node-center {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.page-hero-visual .hero-node-a {
+  grid-column: 3;
+  grid-row: 1;
+}
+
+.page-hero-visual .hero-node-b {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+.page-hero-visual .hero-node-c {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.page-hero-visual .hero-kpi-top {
+  grid-column: 3;
+  grid-row: 2;
+}
+
+.page-hero-visual .hero-kpi-bottom {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+/* The light follows the pointer with a small easing delay. */
+.cursor-glow {
+  --cursor-x: 50vw;
+  --cursor-y: 50vh;
+  position: fixed;
+  inset: 0;
+  z-index: 1025;
+  pointer-events: none;
+  opacity: 0;
+  background: radial-gradient(
+    280px circle at var(--cursor-x) var(--cursor-y),
+    rgba(74, 211, 139, 0.1),
+    rgba(245, 178, 63, 0.035) 34%,
+    transparent 70%
+  );
+  transition: opacity 220ms ease;
+}
+
+.cursor-glow.is-visible {
+  opacity: 1;
+}
+
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition:
+    opacity 680ms cubic-bezier(0.22, 1, 0.36, 1) var(--reveal-delay, 0ms),
+    transform 760ms cubic-bezier(0.22, 1, 0.36, 1) var(--reveal-delay, 0ms);
+  will-change: opacity, transform;
+}
+
+.scroll-reveal.is-revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (max-width: 767.98px) {
+  .page-hero-visual {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: repeat(3, minmax(0, auto));
+    gap: 0.7rem;
+    padding: 1rem;
+  }
+
+  .page-hero-visual .hero-node,
+  .page-hero-visual .hero-kpi {
+    min-height: 74px;
+    padding: 0.72rem;
+  }
+
+  .page-hero-visual .hero-node-center {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  .page-hero-visual .hero-node-a {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  .page-hero-visual .hero-node-b {
+    grid-column: 2;
+    grid-row: 2;
+  }
+
+  .page-hero-visual .hero-node-c {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .page-hero-visual .hero-kpi-top {
+    grid-column: 2;
+    grid-row: 3;
+  }
+
+  .page-hero-visual .hero-kpi-bottom {
+    grid-column: 1;
+    grid-row: 3;
+  }
+}
+
+@media (hover: none), (pointer: coarse) {
+  .cursor-glow {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scroll-reveal,
+  .scroll-reveal.is-revealed {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
