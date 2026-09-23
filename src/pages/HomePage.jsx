@@ -61,39 +61,46 @@ export default function HomePage() {
             </div>
 
             <div className="home-hero-visual" aria-hidden="true">
-              <div className="home-hero-gradient-beam"></div>
-              <div className="home-hero-glow home-hero-glow-a"></div>
-              <div className="home-hero-glow home-hero-glow-b"></div>
-              <div className="home-hero-glow home-hero-glow-c"></div>
               <div className="home-hero-grid-lines"></div>
-              <div className="home-hero-spark home-hero-spark-a"></div>
-              <div className="home-hero-spark home-hero-spark-b"></div>
-              <div className="home-hero-core">
-                <span className="home-core-label">Olange Solutions</span>
-                <strong>Services + Supplies</strong>
-                <small>One clear partner for sourcing, support, and delivery.</small>
-              </div>
-              <div className="home-hero-card home-hero-card-a">
-                <i className="fas fa-tools"></i>
-                <span>Field support</span>
-              </div>
-              <div className="home-hero-card home-hero-card-b">
-                <i className="fas fa-box-open"></i>
-                <span>Supply sourcing</span>
-              </div>
-              <div className="home-hero-accent home-hero-accent-top">
-                <span>Fast response</span>
-                <strong>Quicker coordination</strong>
-              </div>
-              <div className="home-hero-accent home-hero-accent-bottom">
-                <i className="fas fa-truck-moving"></i>
-                <div>
-                  <span>Delivery-ready</span>
-                  <strong>Support in motion</strong>
+              <div className="home-hero-color home-hero-color-green"></div>
+              <div className="home-hero-color home-hero-color-gold"></div>
+              <div className="home-hero-panel">
+                <div className="home-hero-panel-head">
+                  <span>Olange workflow</span>
+                  <span className="home-hero-live"><i></i> Ready</span>
+                </div>
+                <div className="home-hero-panel-main">
+                  <span className="home-hero-panel-icon"><i className="fas fa-layer-group"></i></span>
+                  <div>
+                    <strong>Services + Supplies</strong>
+                    <small>One dependable route from request to delivery.</small>
+                  </div>
+                </div>
+                <div className="home-hero-flow" role="presentation">
+                  <div className="home-hero-flow-step is-active">
+                    <i className="fas fa-comment-dots"></i>
+                    <span>Request</span>
+                  </div>
+                  <span className="home-hero-flow-line"></span>
+                  <div className="home-hero-flow-step">
+                    <i className="fas fa-clipboard-check"></i>
+                    <span>Coordinate</span>
+                  </div>
+                  <span className="home-hero-flow-line"></span>
+                  <div className="home-hero-flow-step">
+                    <i className="fas fa-truck-moving"></i>
+                    <span>Deliver</span>
+                  </div>
                 </div>
               </div>
-              <div className="home-hero-orbit home-hero-orbit-one"></div>
-              <div className="home-hero-orbit home-hero-orbit-two"></div>
+              <div className="home-hero-chip home-hero-chip-service">
+                <i className="fas fa-tools"></i>
+                <span><strong>Field services</strong><small>Practical support</small></span>
+              </div>
+              <div className="home-hero-chip home-hero-chip-supply">
+                <i className="fas fa-box-open"></i>
+                <span><strong>Supply sourcing</strong><small>Reliable delivery</small></span>
+              </div>
             </div>
           </div>
         </div>
@@ -201,10 +208,8 @@ export default function HomePage() {
           <div className="testimonial-showcase">
             <div className="section-heading text-center mx-auto" style={{ maxWidth: 720 }}>
               <p className="section-badge justify-content-center mx-auto">Testimonials</p>
-              <h1 className="display-5 mb-3">What working with Olange Solutions can feel like.</h1>
-              <p>
-                A more polished testimonial section with sliding cards that keeps the page feeling active without looking busy.
-              </p>
+              <h1 className="display-5 mb-3">What our clients say</h1>
+              <p>Feedback from clients who value responsive communication, practical support, and dependable delivery.</p>
             </div>
 
             <div className="testimonial-marquee">
@@ -215,7 +220,7 @@ export default function HomePage() {
                       <i className="fas fa-quote-left"></i>
                     </div>
                     <div>
-                      <div className="testimonial-stars" aria-label={`${item.rating} star sample testimonial`}>
+                      <div className="testimonial-stars" aria-label={`${item.rating} star testimonial`}>
                         {Array.from({ length: item.rating }).map((_, starIndex) => (
                           <i key={`${item.name}-${index}-${starIndex}`} className="fas fa-star"></i>
                         ))}
@@ -239,7 +244,7 @@ export default function HomePage() {
                       <i className="fas fa-quote-left"></i>
                     </div>
                     <div>
-                      <div className="testimonial-stars" aria-label={`${item.rating} star sample testimonial`}>
+                      <div className="testimonial-stars" aria-label={`${item.rating} star testimonial`}>
                         {Array.from({ length: item.rating }).map((_, starIndex) => (
                           <i key={`${item.name}-reverse-${index}-${starIndex}`} className="fas fa-star"></i>
                         ))}

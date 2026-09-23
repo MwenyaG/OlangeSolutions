@@ -65,7 +65,6 @@ export default function SiteNavbar() {
           <Link to="/" className="navbar-brand d-flex align-items-center">
             <img src="/img/icon/logo1.png" alt="Olange Solutions logo" className="brand-mark me-3" />
             <div className="d-flex flex-column">
-              <span className="brand-status">Service and supply partner</span>
               <h1 className="m-0 brand-name">Olange Solutions</h1>
               <small className="brand-tagline">Where Service Meets Supply, Excellence Follows</small>
             </div>

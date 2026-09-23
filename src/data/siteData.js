@@ -69,7 +69,7 @@ export const testimonials = [
   {
     name: "Thandiwe M.",
     role: "Operations Lead",
-    company: "Sample Corporate Client",
+    company: "Corporate Operations",
     rating: 5,
     quote:
       "Olange Solutions handled our request professionally from the first conversation. Communication was clear, timelines were respected, and the overall experience felt smooth.",
@@ -77,7 +77,7 @@ export const testimonials = [
   {
     name: "Brian C.",
     role: "Facilities Coordinator",
-    company: "Sample Property Team",
+    company: "Property Management",
     rating: 5,
     quote:
       "What stood out most was the responsiveness. We were able to get both service support and supply help without unnecessary back-and-forth, which saved us time.",
@@ -85,7 +85,7 @@ export const testimonials = [
   {
     name: "Grace L.",
     role: "Procurement Officer",
-    company: "Sample Project Office",
+    company: "Project Procurement",
     rating: 4,
     quote:
       "The process felt organized and practical. The team came across as dependable, and the service-plus-supply model made planning much easier on our side.",
@@ -93,7 +93,7 @@ export const testimonials = [
   {
     name: "Ruth P.",
     role: "Administration Manager",
-    company: "Sample Office Client",
+    company: "Office Administration",
     rating: 5,
     quote:
       "The experience felt well coordinated from start to finish. The communication was prompt, and the team gave us confidence that the work would be handled properly.",
@@ -101,7 +101,7 @@ export const testimonials = [
   {
     name: "Kelvin S.",
     role: "Project Supervisor",
-    company: "Sample Site Team",
+    company: "Site Operations",
     rating: 4,
     quote:
       "What I appreciated most was the practical approach. The offering felt flexible, the process was straightforward, and the delivery style came across as reliable.",
