@@ -203,6 +203,7 @@ h6,
 
 .section-badge {
     display: inline-flex;
+    margin-bottom: 1.5rem;
     align-items: center;
     gap: 0.55rem;
     padding: 0.72rem 1rem;
@@ -279,8 +280,10 @@ h6,
     color: #ffffff;
 }
 
-.btn-outline-light:hover {
-    color: var(--heading);
+.btn-outline-light:hover,
+.btn-outline-light:focus,
+.btn-outline-light:active {
+    color: #0f1724;
     background: #ffffff;
     border-color: #ffffff;
 }
@@ -2074,11 +2077,11 @@ textarea.form-control {
     }
 
     .hero-actions {
-        align-items: stretch;
+        align-items: center;
     }
 
     .hero-actions .btn {
-        width: 100%;
+        width: auto;
     }
 
     .section-badge {
